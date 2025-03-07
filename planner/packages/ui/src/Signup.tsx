@@ -2,7 +2,9 @@ import { Typography, Button, TextField, Card } from '@mui/material';
 import { useState } from 'react';
 
 
-  export function Signup(){
+  export function Signup (props: {onClick:(username: string, password:string) => void 
+
+  }) {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
 
@@ -44,7 +46,11 @@ import { useState } from 'react';
                 <Button
                     size={"large"}
                     variant="contained"
-                     > Signup</Button>
+                    onClick={async () =>{
+                        props.onClick(email,password)
+
+                    }}
+                    > Signup</Button>
             </Card>
         </div>
     </div>
