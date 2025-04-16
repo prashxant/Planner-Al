@@ -1,5 +1,5 @@
 import { generateText } from "ai"
-import { GoogleGenAI } from "@google/genai"
+import { openai } from "@ai-sdk/openai"
 import { NextResponse } from "next/server"
 
 export async function POST(req: Request) {
@@ -11,7 +11,7 @@ export async function POST(req: Request) {
     }
 
     const { text } = await generateText({
-      model:  GoogleGenAI("gemini-2.0-flash"),
+      model: openai("gpt-4o"),
         system: `You are an expert travel planner. Create detailed, personalized travel plans 
         based on location, budget, and duration. Include accommodations, activities, 
         restaurants, and practical tips. Format your response, as JSON.`,
