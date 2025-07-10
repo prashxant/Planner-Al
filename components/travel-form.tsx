@@ -54,12 +54,12 @@ export function TravelForm() {
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="space-y-2">
             <Label htmlFor="location">Destination</Label>
-            <Input id="location" name="location" placeholder="e.g., Paris, Tokyo, New York" required />
+            <Input id="location" name="location" placeholder=" Paris, Tokyo, New York" required />
           </div>
 
           <div className="space-y-2">
             <Label htmlFor="budget">Budget</Label>
-            <Input id="budget" name="budget" placeholder="e.g., $1000, €2000" required />
+            <Input id="budget" name="budget" placeholder=" $1000, €2000" required />
           </div>
 
           <div className="space-y-2">
